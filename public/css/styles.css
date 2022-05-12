@@ -1,8 +1,8 @@
 html {
   background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, magenta 50%, white 50%);
+  background-image: -webkit-linear-gradient(65deg, magenta 50%, lightblue 50%);
   min-height: 1000px;
-  font-family: "helvetica neue";
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
 
 .box{
   max-width: 400px;
-  margin 50px auto;
+  margin: 50px auto;
   background: white;
   border-radius: 5px;
   box-shadow:  5px 5px 15px -5px rgba(0,0,0,0.3);
@@ -25,7 +25,6 @@ h1 {
 
 .item {
   min-height: 70px;
-  display: flex;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
 }
@@ -45,6 +44,7 @@ input[type="checkbox"]{
 
 p {
   margin: 0;
+  display: inline-block;
   padding-left: 20px;
   font-size: 20px;
   font-weight: 200;
@@ -64,7 +64,6 @@ button {
   background-color: #A683E3;
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
   border-width: 0;
 
 }
