@@ -1,32 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title>Tuts</title>
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
+<%- include("partials/head") -%>
 
-<body>
   <div class="box" id="date">
     <h1><%= date %></h1>
   </div>
 
   <div class="box">
     <% list.forEach((item) => { %>
-      <div class="item">
-        <input type="checkbox">
-        <p><%= item %></p>
-      </div>
-     <% }); %>
-     <form class="item" action="/home" method="post">
-       <input type="text" name="newItem" placeholder="New Item">
-       <button type="submit" name="button">+</button>
-     </form>
+    <div class="item">
+      <input type="checkbox">
+      <p><%= item %></p>
+    </div>
+    <% }); %>
+    <form class="item" action="/home" method="post">
+      <input type="text" name="newItem" placeholder="New Item">
+      <button type="submit" name="list" value=<%= date %>>+</button>
+    </form>
   </div>
 
 
-
-</body>
-
-</html>
+<%- include("partials/footer") -%>

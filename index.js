@@ -13,14 +13,27 @@ app.get("/", (req,res) => {
 });
 
 const list = new Array();
+const work = new Array();
 
 app.get("/home",(req,res) => {
     const d = new Date();
     res.render("index", {date: d.toDateString(), list: list});
 });
 
+app.get("/work",(req,res) => {
+    const d = "Work";
+    res.render("index", {date: d, list: work});
+});
+
 app.post("/home", (req,res) => {
   const newItem = req.body.newItem;
-  list.push(newItem);
-  res.redirect("/home");
+
+  if(req.body.list == "Work"){
+    work.push(newItem);
+    res.redirect("/work");
+  }else{
+    list.push(newItem);
+    res.redirect("/home");
+  }
+
 });
